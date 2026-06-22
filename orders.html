@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - NutriNest</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+    <script src="main.js" defer></script>
+    <script src="orders.js" defer></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" style="text-decoration: none;"><h1>NutriNest 🌿</h1></a>
+        <div class="nav-links">
+            <a href="products.html" style="margin-right: 15px; text-decoration: none; color: white;">Products</a>
+            <a href="login.html"><button>Login</button></a>
+            <a href="cart.html"><button>Cart 🛒 <span id="cart-count">0</span></button></a>
+        </div>
+    </nav>
+
+    <!-- Orders Section -->
+    <div class="cart-container">
+        <h2>My Order History</h2>
+        <div id="user-orders-container">
+            <!-- Orders will be loaded here dynamically -->
+        </div>
+    </div>
+
+</body>
+</html>

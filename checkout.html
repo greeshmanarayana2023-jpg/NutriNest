@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - NutriNest</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .checkout-container { max-width: 600px; margin: 40px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: bold; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        .location-btn { background: #38BDF8; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; margin-top: 10px; width: 100%; }
+        .place-order-btn { background: #10b981; color: white; border: none; padding: 15px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 18px; font-weight: bold; margin-top: 20px; }
+        .order-summary { background: #f8fafc; padding: 15px; border-radius: 5px; margin-bottom: 20px; border: 1px solid #e2e8f0; }
+    </style>
+    <script src="main.js" defer></script>
+    <script src="checkout.js" defer></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" style="text-decoration: none;"><h1>NutriNest 🌿</h1></a>
+        <div class="nav-links">
+            <a href="products.html" style="margin-right: 15px; text-decoration: none; color: white;">Products</a>
+            <a href="cart.html"><button>Cart 🛒 <span id="cart-count">0</span></button></a>
+        </div>
+    </nav>
+
+    <!-- Checkout Section -->
+    <div class="checkout-container">
+        <h2>Checkout</h2>
+        <div class="order-summary">
+            <h3>Total Amount to Pay: ₹<span id="checkout-total">0</span></h3>
+            <p>Payment Method: Cash on Delivery (COD)</p>
+        </div>
+
+        <form id="checkout-form">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="name" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" id="phone" required placeholder="9876543210">
+            </div>
+            <div class="form-group">
+                <label>Delivery Address</label>
+                <textarea id="address" rows="3" required placeholder="Enter your full address"></textarea>
+                <button type="button" class="location-btn" onclick="autoPickLocation()">📍 Use Current Location</button>
+            </div>
+            <button type="submit" class="place-order-btn">Place Order</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriNest Products</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" style="text-decoration: none;"><h1>NutriNest 🌿</h1></a>
+        <input type="text" placeholder="Search products...">
+        <div class="nav-links">
+            <a href="products.html" style="margin-right: 15px; text-decoration: none; color: white;">Products</a>
+            <a href="login.html"><button>Login</button></a>
+            <a href="cart.html"><button>Cart 🛒 <span id="cart-count">0</span></button></a>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <section class="products">
+        <h2>Our Healthy Products</h2>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="spinach.png" alt="Spinach">
+                <h3>Organic Spinach</h3>
+                <p>₹79</p>
+                <button onclick="addToCart(6, 'Organic Spinach', 79, 'spinach.png')">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="apple.png" alt="Apple">
+                <h3>Fresh Apples</h3>
+                <p>₹199</p>
+                <button onclick="addToCart(7, 'Fresh Apples', 199, 'apple.png')">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="salad.jpg" alt="Salad">
+                <h3>Green Salad</h3>
+                <p>₹149</p>
+                <button onclick="addToCart(8, 'Green Salad', 149, 'salad.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="protein.jpg" alt="Protein">
+                <h3>Whey Protein</h3>
+                <p>₹2499</p>
+                <button onclick="addToCart(1, 'Whey Protein', 2499, 'protein.jpg')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 NutriNest. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
