@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NutriNest Products</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
 </head>
@@ -14,43 +15,53 @@
         <a href="index.html" style="text-decoration: none;"><h1>NutriNest 🌿</h1></a>
         <input type="text" placeholder="Search products...">
         <div class="nav-links">
-            <a href="products.html" style="margin-right: 15px; text-decoration: none; color: white;">Products</a>
-            <a href="login.html"><button>Login</button></a>
-            <a href="cart.html"><button>Cart 🛒 <span id="cart-count">0</span></button></a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="login.html" class="nav-btn">Login</a>
+            <a href="cart.html" class="nav-btn">Cart 🛒 <span id="cart-count">0</span></a>
         </div>
     </nav>
 
     <!-- Products Section -->
     <section class="products">
+        <div style="text-align: left; max-width: 1200px; margin: 0 auto 20px auto; padding: 0 20px;">
+            <a href="javascript:history.back()" class="nav-btn" style="display: inline-flex; width: fit-content; padding: 10px 20px; font-size: 14px; background: white; color: #0369A1; border: 1px solid #BAE6FD;">⬅ Go Back</a>
+        </div>
         <h2>Our Healthy Products</h2>
 
         <div class="products-grid">
-            <div class="product-card">
+            <div class="product-card" data-category="Vegetables">
                 <img src="assets/images/spinach.png" alt="Spinach">
                 <h3>Organic Spinach</h3>
                 <p>₹79</p>
                 <button onclick="addToCart(6, 'Organic Spinach', 79, 'assets/images/spinach.png')">Add to Cart</button>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="Fruits">
                 <img src="assets/images/apple.png" alt="Apple">
                 <h3>Fresh Apples</h3>
                 <p>₹199</p>
                 <button onclick="addToCart(7, 'Fresh Apples', 199, 'assets/images/apple.png')">Add to Cart</button>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="Salads">
                 <img src="assets/images/salad.jpg" alt="Salad">
                 <h3>Green Salad</h3>
                 <p>₹149</p>
                 <button onclick="addToCart(8, 'Green Salad', 149, 'assets/images/salad.jpg')">Add to Cart</button>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="Protein">
                 <img src="assets/images/protein.jpg" alt="Protein">
                 <h3>Whey Protein</h3>
                 <p>₹2499</p>
                 <button onclick="addToCart(1, 'Whey Protein', 2499, 'assets/images/protein.jpg')">Add to Cart</button>
+            </div>
+            
+            <div class="product-card" data-category="Bakery">
+                <img src="assets/images/sandwich.jpg" alt="Fresh Sandwich">
+                <h3>Grilled Sandwich</h3>
+                <p>₹120</p>
+                <button onclick="addToCart(9, 'Grilled Sandwich', 120, 'assets/images/sandwich.jpg')">Add to Cart</button>
             </div>
         </div>
     </section>

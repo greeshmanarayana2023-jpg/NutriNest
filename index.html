@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NutriNest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
 </head>
@@ -14,9 +15,9 @@
         <a href="index.html" style="text-decoration: none;"><h1>NutriNest 🌿</h1></a>
         <input type="text" placeholder="Search products...">
         <div class="nav-links">
-            <a href="products.html" style="margin-right: 15px; text-decoration: none; color: white;">Products</a>
-            <a href="login.html"><button>Login</button></a>
-            <a href="cart.html"><button>Cart 🛒 <span id="cart-count">0</span></button></a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="login.html" class="nav-btn">Login</a>
+            <a href="cart.html" class="nav-btn">Cart 🛒 <span id="cart-count">0</span></a>
         </div>
     </nav>
 
@@ -25,7 +26,7 @@
         <div class="hero-text">
             <h2>Eat Healthy, Live Strong</h2>
             <p>Fresh nutrition delivered to your doorstep</p>
-            <a href="products.html"><button>Shop Now</button></a>
+            <a href="products.html" class="hero-btn">Shop Now</a>
         </div>
 
         <div class="hero-images">
@@ -39,14 +40,15 @@
     <section class="categories">
         <h2>Categories</h2>
         <div class="categories-scroll-container">
-            <div class="category-box">🥬 Vegetables</div>
-            <div class="category-box">🍎 Fruits</div>
-            <div class="category-box">🥗 Salads</div>
-            <div class="category-box">🥤 Milk Shakes</div>
-            <div class="category-box">💪 Protein</div>
-            <div class="category-box">🍫 Snacks</div>
-            <div class="category-box">🍞 Bakery</div>
-            <div class="category-box">🥛 Dairy</div>
+            <div class="category-box" data-category="All">🌟 All</div>
+            <div class="category-box" data-category="Vegetables">🥬 Vegetables</div>
+            <div class="category-box" data-category="Fruits">🍎 Fruits</div>
+            <div class="category-box" data-category="Salads">🥗 Salads</div>
+            <div class="category-box" data-category="Milk Shakes">🥤 Milk Shakes</div>
+            <div class="category-box" data-category="Protein">💪 Protein</div>
+            <div class="category-box" data-category="Snacks">🍫 Snacks</div>
+            <div class="category-box" data-category="Bakery">🍞 Bakery</div>
+            <div class="category-box" data-category="Dairy">🥛 Dairy</div>
         </div>
     </section>
 
@@ -54,39 +56,53 @@
     <section class="products">
         <h2>Featured Products</h2>
         <div class="products-scroll-container">
-            <div class="product-card">
+            <div class="product-card" data-category="Protein">
                 <img src="assets/images/protein.jpg" alt="Protein Powder">
                 <h3>Whey Protein</h3>
                 <p>₹2499</p>
                 <button onclick="addToCart(1, 'Whey Protein', 2499, 'assets/images/protein.jpg')">Add to Cart</button>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="Milk Shakes">
                 <img src="assets/images/shake.jpg" alt="Milk Shake">
                 <h3>Banana Shake</h3>
                 <p>₹199</p>
                 <button onclick="addToCart(2, 'Banana Shake', 199, 'assets/images/shake.jpg')">Add to Cart</button>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="Vegetables">
                 <img src="assets/images/veg_basket.png" alt="Vegetable Basket">
                 <h3>Fresh Veggies Basket</h3>
                 <p>₹499</p>
                 <button onclick="addToCart(3, 'Fresh Veggies Basket', 499, 'assets/images/veg_basket.png')">Add to Cart</button>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="Fruits">
                 <img src="assets/images/fresh_fruits.png" alt="Fresh Fruits">
                 <h3>Assorted Fruits</h3>
                 <p>₹599</p>
                 <button onclick="addToCart(4, 'Assorted Fruits', 599, 'assets/images/fresh_fruits.png')">Add to Cart</button>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="Snacks">
                 <img src="assets/images/protein_bar.png" alt="Protein Bar">
                 <h3>Healthy Protein Bar</h3>
                 <p>₹150</p>
                 <button onclick="addToCart(5, 'Healthy Protein Bar', 150, 'assets/images/protein_bar.png')">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="Salads">
+                <img src="assets/images/salad.jpg" alt="Green Salad">
+                <h3>Green Salad</h3>
+                <p>₹149</p>
+                <button onclick="addToCart(8, 'Green Salad', 149, 'assets/images/salad.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="Bakery">
+                <img src="assets/images/sandwich.jpg" alt="Fresh Sandwich">
+                <h3>Grilled Sandwich</h3>
+                <p>₹120</p>
+                <button onclick="addToCart(9, 'Grilled Sandwich', 120, 'assets/images/sandwich.jpg')">Add to Cart</button>
             </div>
         </div>
     </section>
